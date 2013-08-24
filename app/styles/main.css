@@ -34,7 +34,7 @@ body {
     text-align: center;
 }
 
-.questionnaire div p{
+.questionnaire div.description p{
     padding: 0 10px 0 10px;
 }
 
@@ -69,3 +69,16 @@ fieldset textarea{
 textarea {
     resize:vertical;
 }
+
+.okgo{
+    text-align:center;
+    background-color:#1abc9c;
+    margin: 20px -20px -20px -20px;
+    padding: 10px;
+}
+
+.okgo input{
+    margin: 0 10px 0 10px;
+}
+
+
