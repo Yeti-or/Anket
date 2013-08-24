@@ -12,7 +12,7 @@ body {
     padding: 0.2em 0;
 }
 
-.questionnaire{
+.questionnaire {
     margin-left: 20%;
     margin-right: 17%;
     margin-top: 50px;
@@ -30,8 +30,12 @@ body {
     font-size: 130%; 
 }
 
-header {
+.questionnaire header {
     text-align: center;
+}
+
+.questionnaire div p{
+    padding: 0 10px 0 10px;
 }
 
 fieldset {
@@ -49,7 +53,7 @@ fieldset {
     text-align: center;
     border-radius:50%;
     position: absolute;
-    margin-left: -80px;
+    margin-left: -90px;
     margin-top: 15px;
 }
 .question_mark label{
