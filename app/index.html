@@ -49,89 +49,111 @@
                         <label for="birth">1</label>
                     </div>
                     <p>Год рождения.</p>
-                    <input type="text" id="birth" name="birth"/>
+                    <div class="toggle">
+                        <input type="text" id="birth" name="birth"/>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="city">2</label>
                     </div>
                     <p>Город, в котором вы живёте.</p>
-                    <input type="text" id="city" name="city"/>
+                    <div class="toggle">
+                        <input type="text" id="city" name="city"/>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="Univer">3</label>
                     </div>
                     <p>Вуз, факультет, специальность, кафедра.</p>
-                    <textarea id="Univer" name="Univer"></textarea>
+                    <div class="toggle">
+                        <textarea id="Univer" name="Univer"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="alumni">4</label>
                     </div>
                     <p>Год окончания вуза.</p>
-                    <input type="text" id="alumni" name="alumni"/>
+                    <div class="toggle">
+                        <input type="text" id="alumni" name="alumni"/>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="englishDop">5</label>
                     </div>
                     <p>Уровень владения английским языком:</p>
-                    <p>
-                        <input type="radio" name="english" value="beginner" id="beginner"/>
-                        <label for="beginner">начальный;</label>
-                    </p>
-                    <p>
-                        <input type="radio" name="english" value="middle" id="middle"/>
-                        <label for="middle">средний;</label>
-                    </p>
-                    <p>
-                        <input type="radio" name="english" value="fluent" id="fluent"/>
-                        <label for="fluent">ссвободное владение.</label>
-                    </p>
-                    <p><textarea id="englishDop" name="englishDop"></textarea></p>
+                    <div class="toggle">
+                        <p>
+                            <input type="radio" name="english" value="beginner" id="beginner"/>
+                            <label for="beginner">начальный;</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="english" value="middle" id="middle"/>
+                            <label for="middle">средний;</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="english" value="fluent" id="fluent"/>
+                            <label for="fluent">ссвободное владение.</label>
+                        </p>
+                        <p><textarea id="englishDop" name="englishDop"></textarea></p>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="expect">6</label>
                     </div>
                     <p>Чего вы ожидаете от участия в Школе?</p>
-                    <textarea id="expect" name="expect"></textarea>
+                    <div class="toggle">
+                        <textarea id="expect" name="expect"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="fromWhom">7</label>
                     </div>
                     <p>Откуда вы о нас узнали?</p>
-                    <textarea id="fromWhom" name="fromWhom"></textarea>
+                    <div class="toggle">
+                        <textarea id="fromWhom" name="fromWhom"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="time">8</label>
                     </div>
                     <p>Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</p>
-                    <textarea id="time" name="time"></textarea>
+                    <div class="toggle">
+                        <textarea id="time" name="time"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="exp">9</label>
                     </div>
                     <p>Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.</p>
-                    <textarea id="exp" name="exp"></textarea>
+                    <div class="toggle">
+                        <textarea id="exp" name="exp"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="work">10</label>
                     </div>
                     <p>Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.</p>
-                    <textarea id="work" name="work"></textarea>
+                    <div class="toggle">
+                        <textarea id="work" name="work"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="progs">11</label>
                     </div>
                     <p>Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента укажите, какие задачи вы с помощью него решаете и почему выбрали именно его.</p>
-                    <textarea id="progs" name="progs"></textarea>
+                    <div class="toggle">
+                        <textarea id="progs" name="progs"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
@@ -142,7 +164,9 @@
                         Какими командами вы пользуетесь и какие задачи вы решаете с их помощью?
                         С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?
                     </p>
-                    <textarea id="cli" name="cli"></textarea>
+                    <div class="toggle">
+                        <textarea id="cli" name="cli"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
@@ -151,11 +175,13 @@
                     <p>
                         Напишите на JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов своих цифр. Пример такого числа:
                     </p>
-                    <p> 4! + 0! + 5! + 8! + 5! = 40585 </p>
-                    <p>
-                        В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
-                    </p>
-                    <textarea id="fact" name="fact"></textarea>
+                    <div class="toggle">
+                        <p> 4! + 0! + 5! + 8! + 5! = 40585 </p>
+                        <p>
+                            В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
+                        </p>
+                        <textarea id="fact" name="fact"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
@@ -169,20 +195,22 @@
                          Каждая планета может содержать на себе груз, который можно взять.
                          Также на каждой планете груз можно оставить.
                     </p>
-                    <p> Задание </p>
-                    <p>
-                        Даны незавершенные интерфейсы корабля и планеты. Напишите недостающий код.
-                    </p>
-                    <p>
-                        Полное условие задачи доступно на
-                    </p>
-                    <p>
-                        <a href="https://github.com/yandex-shri/introtask-space" target="_blank">https://github.com/yandex-shri/introtask-space</a>
-                    </p>
-                    <p>
-                        В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
-                    </p>
-                    <textarea id="vessel" name="vessel"></textarea>
+                    <div class="toggle">
+                        <p> Задание </p>
+                        <p>
+                            Даны незавершенные интерфейсы корабля и планеты. Напишите недостающий код.
+                        </p>
+                        <p>
+                            Полное условие задачи доступно на
+                        </p>
+                        <p>
+                            <a href="https://github.com/yandex-shri/introtask-space" target="_blank">https://github.com/yandex-shri/introtask-space</a>
+                        </p>
+                        <p>
+                            В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
+                        </p>
+                        <textarea id="vessel" name="vessel"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
@@ -195,21 +223,23 @@
                         Страница должна содержать интерактив, реализованный с помощью JS и jQuery.
                         Это может быть:
                     </p>
-                    <ul>
-                        <li>проверка полноты и правильности заполнения полей (где это возможно);</li>
-                        <li>возможность свернуть и развернуть разделы (аккордеон);</li>
-                        <li>индикатор заполнения анкеты;</li>
-                        <li>что-нибудь ещё.</li>
-                    </ul>
-                    <p>Подумайте над тем, как эти данные будут отправляться на сервер.</p>
-                    <p>Будет плюсом, если вы сверстаете страницу, используя БЭМ.</p>
-                    <p> Дополнительные задания </p>
-                    <ol>
-                        <li>Выполните задание про форму-анкету, используя один из классических шаблонизаторов: Handlebars, mustache, Dust, Jade и т.п.</li>
-                        <li>Выполните задание про форму-анкету, используя один из экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.</li>
-                    </ol>
-                    <p>Разработку необходимо вести на https://github.com/. В качестве ответа на вопрос пришлите ссылку на проект.</p>
-                    <textarea id="recursion" name="recursion"></textarea>
+                    <div class="toggle">
+                        <ul>
+                            <li>проверка полноты и правильности заполнения полей (где это возможно);</li>
+                            <li>возможность свернуть и развернуть разделы (аккордеон);</li>
+                            <li>индикатор заполнения анкеты;</li>
+                            <li>что-нибудь ещё.</li>
+                        </ul>
+                        <p>Подумайте над тем, как эти данные будут отправляться на сервер.</p>
+                        <p>Будет плюсом, если вы сверстаете страницу, используя БЭМ.</p>
+                        <p> Дополнительные задания </p>
+                        <ol>
+                            <li>Выполните задание про форму-анкету, используя один из классических шаблонизаторов: Handlebars, mustache, Dust, Jade и т.п.</li>
+                            <li>Выполните задание про форму-анкету, используя один из экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.</li>
+                        </ol>
+                        <p>Разработку необходимо вести на https://github.com/. В качестве ответа на вопрос пришлите ссылку на проект.</p>
+                        <textarea id="recursion" name="recursion"></textarea>
+                    </div>
                 </fieldset>
                 <hr/>
 

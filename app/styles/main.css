@@ -4,6 +4,10 @@ body {
     color: #333;
 }
 
+label {
+    cursor: pointer;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -67,6 +71,7 @@ body {
     border: 2px solid #1abc9c;
     border-top: 40px solid #1abc9c;
     position: relative;
+    max-width: 1024px;
 }
 
 .questionnaire header + div p:first-child::first-letter {
@@ -100,6 +105,7 @@ fieldset {
     position: absolute;
     margin-left: -90px;
     margin-top: 15px;
+    cursor: pointer;
 }
 .question_mark label{
     line-height:30px;
