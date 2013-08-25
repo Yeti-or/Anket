@@ -50,7 +50,7 @@
                     </div>
                     <p>Год рождения.</p>
                     <div class="toggle">
-                        <input type="text" id="birth" name="birth"/>
+                        <textarea id="birth" name="birth" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -59,7 +59,7 @@
                     </div>
                     <p>Город, в котором вы живёте.</p>
                     <div class="toggle">
-                        <input type="text" id="city" name="city"/>
+                        <textarea id="city" name="city" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -68,7 +68,7 @@
                     </div>
                     <p>Вуз, факультет, специальность, кафедра.</p>
                     <div class="toggle">
-                        <textarea id="Univer" name="Univer"></textarea>
+                        <textarea id="Univer" name="Univer" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -77,7 +77,7 @@
                     </div>
                     <p>Год окончания вуза.</p>
                     <div class="toggle">
-                        <input type="text" id="alumni" name="alumni"/>
+                        <textarea id="alumni" name="alumni" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -98,7 +98,9 @@
                             <input type="radio" name="english" value="fluent" id="fluent"/>
                             <label for="fluent">ссвободное владение.</label>
                         </p>
-                        <p><textarea id="englishDop" name="englishDop"></textarea></p>
+                        <p>
+                            <textarea id="englishDop" name="englishDop" rows="4"></textarea>
+                        </p>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -107,16 +109,16 @@
                     </div>
                     <p>Чего вы ожидаете от участия в Школе?</p>
                     <div class="toggle">
-                        <textarea id="expect" name="expect"></textarea>
+                        <textarea id="expect" name="expect" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
-                        <label for="fromWhom">7</label>
+                        <label for="fromWhom">42</label>
                     </div>
                     <p>Откуда вы о нас узнали?</p>
                     <div class="toggle">
-                        <textarea id="fromWhom" name="fromWhom"></textarea>
+                        <textarea id="fromWhom" name="fromWhom" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -125,7 +127,7 @@
                     </div>
                     <p>Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</p>
                     <div class="toggle">
-                        <textarea id="time" name="time"></textarea>
+                        <textarea id="time" name="time" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -134,7 +136,7 @@
                     </div>
                     <p>Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.</p>
                     <div class="toggle">
-                        <textarea id="exp" name="exp"></textarea>
+                        <textarea id="exp" name="exp" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -143,7 +145,7 @@
                     </div>
                     <p>Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.</p>
                     <div class="toggle">
-                        <textarea id="work" name="work"></textarea>
+                        <textarea id="work" name="work" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -152,7 +154,7 @@
                     </div>
                     <p>Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента укажите, какие задачи вы с помощью него решаете и почему выбрали именно его.</p>
                     <div class="toggle">
-                        <textarea id="progs" name="progs"></textarea>
+                        <textarea id="progs" name="progs" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -165,7 +167,7 @@
                         С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?
                     </p>
                     <div class="toggle">
-                        <textarea id="cli" name="cli"></textarea>
+                        <textarea id="cli" name="cli" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -180,7 +182,7 @@
                         <p>
                             В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
                         </p>
-                        <textarea id="fact" name="fact"></textarea>
+                        <textarea id="fact" name="fact" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -209,7 +211,7 @@
                         <p>
                             В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
                         </p>
-                        <textarea id="vessel" name="vessel"></textarea>
+                        <textarea id="vessel" name="vessel" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -238,7 +240,7 @@
                             <li>Выполните задание про форму-анкету, используя один из экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.</li>
                         </ol>
                         <p>Разработку необходимо вести на https://github.com/. В качестве ответа на вопрос пришлите ссылку на проект.</p>
-                        <textarea id="recursion" name="recursion"></textarea>
+                        <textarea id="recursion" name="recursion" rows="4"></textarea>
                     </div>
                 </fieldset>
                 <hr/>
@@ -268,22 +270,24 @@
                     </div>
                     <div class="inline">
                         <label for="dopInfo">Дополнительные сведения</label>
-                        <textarea id="dopInfo" name="dopInfo"></textarea>
+                        <textarea id="dopInfo" name="dopInfo" rows="4"></textarea>
                     </div>
                     <div>
-                        <p>Откуда вы узнали о нашем предложении?</p>
-                        <select name="recomendBy">
+                        <p>
+                            <label for="recommendBy">Откуда вы узнали о нашем предложении?</label>
+                        </p>
+                        <select name="recommendBy" id="recommendBy">
                             <option value="no"> Выбрать </option>
                             <option value="fromHR"> От HR-менеджера Яндекса </option>
                             <option value="yaSubotnik"> Я.Субботник </option>
                             <option value="YAC"> Yet Another Conference </option>
                             <option value="anotherConference"> На другой конференции </option>
                             <option value="search"> Из поиска </option>
-                            <option value="recomend"> По рекомендации </option>
-                            <option value="other"> Другое </option>
+                            <option value="recommend"> По рекомендации </option>
+                            <option value="other" > Другое </option>
                         </select>
                         <p>
-                            <input type="text" name="recomendOther"/>
+                            <input type="text" name="recommendOther" id="recommendOther"/>
                         </p>
                     </div>
                     <div>
@@ -315,5 +319,5 @@
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
-</body>
+    </body>
 </html>
