@@ -114,6 +114,36 @@ fieldset textarea{
 textarea {
     resize:vertical;
 }
+.resume{
+    margin-left: 20px;
+}
+.resume .inline{
+    margin-bottom: 20px;
+}
+.inline{
+    display: inline-block;
+    font-size: 90%;
+    width: 100%;
+}
+.inline:after{
+    content: '';
+    display: block;
+}
+
+.inline label{
+    width: 170px;
+    white-space: pre-wrap;
+    float: left;
+}
+.inline input{
+    margin-left: 10px;
+    width: 200px;
+}
+.inline textarea{
+    margin-left: 10px;
+    width: 198px;
+}
+
 
 .okgo{
     text-align:center;
