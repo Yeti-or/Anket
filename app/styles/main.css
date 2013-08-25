@@ -55,7 +55,7 @@ body {
     width: 0;
     height: 164.5px;
     border-style: solid;
-    border-width: 0 0 37px 21.5px;
+    border-width: 0 0 37px 21px;
     border-color: transparent transparent transparent #ecf0f1;
 ;
 }
@@ -120,6 +120,13 @@ textarea {
 .resume .inline{
     margin-bottom: 20px;
 }
+
+.resume .inline .note{
+    margin: 2px 0 0 180px;
+    color: gray;
+    font-size: 90%;
+}
+
 .inline{
     display: inline-block;
     font-size: 90%;
