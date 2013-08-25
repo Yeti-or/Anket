@@ -22,8 +22,10 @@
         <![endif]-->
 
         <div class="questionnaire">
+        <!--[if gt IE 7]><!-->
             <div class="triangle"></div>
             <div class="hide"></div>
+        <!--<![endif]-->
             <header>
                 <h1>Анкета второй Школы разработки интерфейсов в Москве</h1>
             </header>
@@ -312,10 +314,12 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/raphael/raphael.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/progress.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 

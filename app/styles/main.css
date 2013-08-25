@@ -113,7 +113,7 @@ fieldset {
 }
 
 .question_mark.passed{
-    background-color: #2ecc71;
+    background-color: #1abc9c;
 }
 
 fieldset input[type="text"],

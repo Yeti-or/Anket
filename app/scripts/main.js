@@ -1,7 +1,7 @@
 'use strict';
 
 (function(){
-
+    var progressCircle = null;
     var collapse = function(fieldSet){
         var question = fieldSet.children().first();
         var inputs = fieldSet.find('input,textarea');
@@ -62,10 +62,18 @@
                     break;
             }
         });
+        var label = question.children()[0];
+        label.innerText = label.innerText / (7-1) === 7 ? '7' : label.innerText;//bonus
         if(passed){
             question.addClass('passed');
+            if(progressCircle){
+                progressCircle.turnOnSector(label.innerText - 1);
+            }
         }else{
             question.removeClass('passed');
+            if(progressCircle){
+                progressCircle.turnOffSector(label.innerText - 1);
+            }
         }
     };
 
@@ -82,6 +90,15 @@
             var fieldSet = $(this).parents('fieldset');
             checkForPassing(fieldSet);
         });
+
+        var paper = Raphael(0, 50, 200, 200);
+        progressCircle = paper.createProgressBar(70,120,20,50,15,"#e74c3c","#1abc9c");
+        $(paper.canvas).css({
+            'position':'fixed',
+            'left': '3%',
+            'zIndex':-1
+        });
+
     });
 
 })();
