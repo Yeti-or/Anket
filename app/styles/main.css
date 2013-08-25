@@ -1,7 +1,6 @@
 body {
     background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Noto Serif',"Helvetica Neue", Helvetica, Arial, serif;
     color: #333;
 }
 
