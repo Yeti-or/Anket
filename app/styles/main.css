@@ -112,6 +112,10 @@ fieldset {
     color: white;
 }
 
+.question_mark.passed{
+    background-color: #2ecc71;
+}
+
 fieldset input[type="text"],
 fieldset textarea{
     width: 100%;
