@@ -2,7 +2,16 @@
   "name": "anket",
   "version": "0.0.0",
   "dependencies": {
+    "normalize-css": "~2.1.2",
     "jquery": "~1.9.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
