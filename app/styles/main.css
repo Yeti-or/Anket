@@ -11,17 +11,63 @@ body {
     color: #000;
     padding: 0.2em 0;
 }
+.questionnaire:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -72px;
+    top: -37px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 120px 0 120px 70px;
+    border-color: transparent transparent transparent #1abc9c;
+}
 
+.questionnaire:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -70px;
+    top: -33px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 116.5px 0 116.5px 68px;
+    border-color: transparent transparent transparent #ecf0f1;
+}
+.questionnaire .triangle {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    right: -22px;
+    top: -37px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 37px 0 0 21.5px;
+    border-color: transparent transparent transparent #1abc9c;
+}
+.questionnaire .hide{
+    z-index: 3;
+    display: block;
+    position: absolute;
+    right: -21px;
+    width: 0;
+    height: 164.5px;
+    border-style: solid;
+    border-width: 0 0 37px 21.5px;
+    border-color: transparent transparent transparent #ecf0f1;
+;
+}
 .questionnaire {
-    margin-left: 20%;
-    margin-right: 17%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 17% 50px 20%;
     border-radius: 4px;
     background-color: #ecf0f1;
     padding: 0 20px 20px 20px;
     border: 2px solid #1abc9c;
     border-top: 40px solid #1abc9c;
+    position: relative;
 }
 
 .questionnaire header + div p:first-child::first-letter {
