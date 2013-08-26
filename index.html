@@ -11,14 +11,28 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="icon" href="favicon.ico">
         <link href="http://fonts.googleapis.com/css?family=Noto+Serif&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="styles/f0e1dd38.main.css">
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+
+        <div class="progress" id="progress">
+            <div>
+                <span class="expandAll">Раскрыть все</span>
+                <span class="collapseAll">Свернуть все</span>
+            </div>
+        </div>
         <div class="questionnaire">
+        <!--[if gt IE 7]><!-->
+            <div class="triangle"></div>
+            <div class="hide"></div>
+        <!--<![endif]-->
             <header>
                 <h1>Анкета второй Школы разработки интерфейсов в Москве</h1>
             </header>
@@ -38,95 +52,119 @@
                 </p>
             </div>
 
-            <form>
+            <form enctype="multipart/form-data">
                 <fieldset>
                     <div class="question_mark">
                         <label for="birth">1</label>
                     </div>
                     <p>Год рождения.</p>
-                    <input type="text" id="birth" name="birth">
+                    <div class="toggle">
+                        <textarea id="birth" name="birth" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="city">2</label>
                     </div>
                     <p>Город, в котором вы живёте.</p>
-                    <input type="text" id="city" name="city">
+                    <div class="toggle">
+                        <textarea id="city" name="city" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="Univer">3</label>
                     </div>
                     <p>Вуз, факультет, специальность, кафедра.</p>
-                    <textarea id="Univer" name="Univer"></textarea>
+                    <div class="toggle">
+                        <textarea id="Univer" name="Univer" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="alumni">4</label>
                     </div>
                     <p>Год окончания вуза.</p>
-                    <input type="text" id="alumni" name="alumni">
+                    <div class="toggle">
+                        <textarea id="alumni" name="alumni" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="englishDop">5</label>
                     </div>
                     <p>Уровень владения английским языком:</p>
-                    <p>
-                        <input type="radio" name="english" value="beginner" id="beginner">
-                        <label for="beginner">начальный;</label>
-                    </p>
-                    <p>
-                        <input type="radio" name="english" value="middle" id="middle">
-                        <label for="middle">средний;</label>
-                    </p>
-                    <p>
-                        <input type="radio" name="english" value="fluent" id="fluent">
-                        <label for="fluent">ссвободное владение.</label>
-                    </p>
-                    <p><textarea id="englishDop" name="englishDop"></textarea></p>
+                    <div class="toggle">
+                        <p>
+                            <input type="radio" name="english" value="beginner" id="beginner">
+                            <label for="beginner">начальный;</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="english" value="middle" id="middle">
+                            <label for="middle">средний;</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="english" value="fluent" id="fluent">
+                            <label for="fluent">ссвободное владение.</label>
+                        </p>
+                        <p>
+                            <textarea id="englishDop" name="englishDop" rows="4"></textarea>
+                        </p>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="expect">6</label>
                     </div>
                     <p>Чего вы ожидаете от участия в Школе?</p>
-                    <textarea id="expect" name="expect"></textarea>
+                    <div class="toggle">
+                        <textarea id="expect" name="expect" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
-                        <label for="fromWhom">7</label>
+                        <label for="fromWhom">42</label>
                     </div>
                     <p>Откуда вы о нас узнали?</p>
-                    <textarea id="fromWhom" name="fromWhom"></textarea>
+                    <div class="toggle">
+                        <textarea id="fromWhom" name="fromWhom" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="time">8</label>
                     </div>
                     <p>Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</p>
-                    <textarea id="time" name="time"></textarea>
+                    <div class="toggle">
+                        <textarea id="time" name="time" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="exp">9</label>
                     </div>
                     <p>Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.</p>
-                    <textarea id="exp" name="exp"></textarea>
+                    <div class="toggle">
+                        <textarea id="exp" name="exp" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="work">10</label>
                     </div>
                     <p>Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.</p>
-                    <textarea id="work" name="work"></textarea>
+                    <div class="toggle">
+                        <textarea id="work" name="work" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
                         <label for="progs">11</label>
                     </div>
                     <p>Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента укажите, какие задачи вы с помощью него решаете и почему выбрали именно его.</p>
-                    <textarea id="progs" name="progs"></textarea>
+                    <div class="toggle">
+                        <textarea id="progs" name="progs" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
@@ -137,7 +175,9 @@
                         Какими командами вы пользуетесь и какие задачи вы решаете с их помощью?
                         С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?
                     </p>
-                    <textarea id="cli" name="cli"></textarea>
+                    <div class="toggle">
+                        <textarea id="cli" name="cli" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
@@ -146,11 +186,13 @@
                     <p>
                         Напишите на JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов своих цифр. Пример такого числа:
                     </p>
-                    <p> 4! + 0! + 5! + 8! + 5! = 40585 </p>
-                    <p>
-                        В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
-                    </p>
-                    <textarea id="fact" name="fact"></textarea>
+                    <div class="toggle">
+                        <p> 4! + 0! + 5! + 8! + 5! = 40585 </p>
+                        <p>
+                            В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
+                        </p>
+                        <textarea id="fact" name="fact" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
@@ -164,20 +206,22 @@
                          Каждая планета может содержать на себе груз, который можно взять.
                          Также на каждой планете груз можно оставить.
                     </p>
-                    <p> Задание </p>
-                    <p>
-                        Даны незавершенные интерфейсы корабля и планеты. Напишите недостающий код.
-                    </p>
-                    <p>
-                        Полное условие задачи доступно на
-                    </p>
-                    <p>
-                        <a href="https://github.com/yandex-shri/introtask-space" target="_blank">https://github.com/yandex-shri/introtask-space</a>
-                    </p>
-                    <p>
-                        В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
-                    </p>
-                    <textarea id="vessel" name="vessel"></textarea>
+                    <div class="toggle">
+                        <p> Задание </p>
+                        <p>
+                            Даны незавершенные интерфейсы корабля и планеты. Напишите недостающий код.
+                        </p>
+                        <p>
+                            Полное условие задачи доступно на
+                        </p>
+                        <p>
+                            <a href="https://github.com/yandex-shri/introtask-space" target="_blank">https://github.com/yandex-shri/introtask-space</a>
+                        </p>
+                        <p>
+                            В качестве ответа на вопрос пришлите ссылку на http://jsfiddle.net/ с вашим кодом или на ваш репозиторий на https://github.com/.
+                        </p>
+                        <textarea id="vessel" name="vessel" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div class="question_mark">
@@ -190,70 +234,79 @@
                         Страница должна содержать интерактив, реализованный с помощью JS и jQuery.
                         Это может быть:
                     </p>
-                    <ul>
-                        <li>проверка полноты и правильности заполнения полей (где это возможно);</li>
-                        <li>возможность свернуть и развернуть разделы (аккордеон);</li>
-                        <li>индикатор заполнения анкеты;</li>
-                        <li>что-нибудь ещё.</li>
-                    </ul>
-                    <p>Подумайте над тем, как эти данные будут отправляться на сервер.</p>
-                    <p>Будет плюсом, если вы сверстаете страницу, используя БЭМ.</p>
-                    <p> Дополнительные задания </p>
-                    <ol>
-                        <li>Выполните задание про форму-анкету, используя один из классических шаблонизаторов: Handlebars, mustache, Dust, Jade и т.п.</li>
-                        <li>Выполните задание про форму-анкету, используя один из экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.</li>
-                    </ol>
-                    <p>Разработку необходимо вести на https://github.com/. В качестве ответа на вопрос пришлите ссылку на проект.</p>
-                    <textarea id="recursion" name="recursion"></textarea>
+                    <div class="toggle">
+                        <ul>
+                            <li>проверка полноты и правильности заполнения полей (где это возможно);</li>
+                            <li>возможность свернуть и развернуть разделы (аккордеон);</li>
+                            <li>индикатор заполнения анкеты;</li>
+                            <li>что-нибудь ещё.</li>
+                        </ul>
+                        <p>Подумайте над тем, как эти данные будут отправляться на сервер.</p>
+                        <p>Будет плюсом, если вы сверстаете страницу, используя БЭМ.</p>
+                        <p> Дополнительные задания </p>
+                        <ol>
+                            <li>Выполните задание про форму-анкету, используя один из классических шаблонизаторов: Handlebars, mustache, Dust, Jade и т.п.</li>
+                            <li>Выполните задание про форму-анкету, используя один из экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.</li>
+                        </ol>
+                        <p>Разработку необходимо вести на https://github.com/. В качестве ответа на вопрос пришлите ссылку на проект.</p>
+                        <textarea id="recursion" name="recursion" rows="4"></textarea>
+                    </div>
                 </fieldset>
                 <hr>
 
                 <div class="resume">
                     <h3>Расскажите нам о себе</h3>
-                    <div>
+                    <div class="inline">
                         <label for="fileUpload">Резюме до 250 КБ</label>
-                        <input type="file" id="fileUpload" name="fileUpload">
+                        <span class="btn btn-file">Выберите файл
+                            <input type="file" id="fileUpload" name="fileUpload">
+                        </span>
+                        <span class="file-name">
+
+                        </span>
                     </div>
-                    <div>
+                    <div class="inline">
                         <label for="myCircle">Ссылка на профиль в Моем Круге</label>
                         <input type="text" id="myCircle" name="myCircle">
                     </div>
-                    <div>
+                    <div class="inline">
                         <label for="fio">Имя, Фамилия</label>
                         <input type="text" id="fio" name="fio">
                     </div>
-                    <div>
+                    <div class="inline">
                         <label for="phone">Телефон</label>
                         <input type="text" id="phone" name="phone">
-                        <p>Пожалуйста, укажите код города</p>
+                        <p class="note">Пожалуйста, укажите код города</p>
                     </div>
-                    <div>
+                    <div class="inline">
                         <label for="email"><strong>E-mail</strong></label>
                         <input type="text" id="email" name="email">
                     </div>
-                    <div>
+                    <div class="inline">
                         <label for="dopInfo">Дополнительные сведения</label>
-                        <textarea id="dopInfo" name="dopInfo"></textarea>
+                        <textarea id="dopInfo" name="dopInfo" rows="4"></textarea>
                     </div>
                     <div>
-                        <p>Откуда вы узнали о нашем предложении?</p>
-                        <select name="recomendBy">
+                        <p>
+                            <label for="recommendBy">Откуда вы узнали о нашем предложении?</label>
+                        </p>
+                        <select name="recommendBy" id="recommendBy">
                             <option value="no"> Выбрать </option>
                             <option value="fromHR"> От HR-менеджера Яндекса </option>
                             <option value="yaSubotnik"> Я.Субботник </option>
                             <option value="YAC"> Yet Another Conference </option>
                             <option value="anotherConference"> На другой конференции </option>
                             <option value="search"> Из поиска </option>
-                            <option value="recomend"> По рекомендации </option>
+                            <option value="recommend"> По рекомендации </option>
                             <option value="other"> Другое </option>
                         </select>
                         <p>
-                            <input type="text" name="recomendOther">
+                            <input type="text" name="recommendOther" id="recommendOther">
                         </p>
                     </div>
                     <div>
                         <p>
-                            <input type="checkbox" name="iAgree" id="iAgree">
+                            <input type="checkbox" name="iAgree" id="iAgree" required="true">
                             <label for="iAgree">
                                 <strong>
                                     Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
@@ -264,15 +317,23 @@
                 </div>
 
                 <div class="okgo">
-                    <input type="submit" value="Отправить">
-                    <input type="reset" value="Очистить">
+                    <input type="submit" value="Отправить" class="btn">
+                    <input type="reset" value="Очистить" class="btn">
                 </div>
             </form>
         </div>
 
-        <script src="scripts/ce8aa666.vendor.js"></script>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/raphael/raphael.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
 
-        <script src="scripts/b6c3df09.main.js"></script>
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/progress.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
 
-</body>
+    </body>
 </html>
