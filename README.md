@@ -1,6 +1,7 @@
 Anket
 =====
 
-Give me two more days!!
+Demo: http://yetior.github.io/Anket/
 
-Yandex shri 2013
+>Yandex shri 2013
+
