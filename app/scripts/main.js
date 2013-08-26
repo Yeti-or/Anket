@@ -2,34 +2,41 @@
 
 (function(){
     var progressCircle = null;
-    var collapse = function(fieldSet){
-        var question = fieldSet.children().first();
-        var inputs = fieldSet.find('input,textarea');
-        var title = fieldSet.find('p').first();
 
-        fieldSet.find('.toggle').slideToggle(100,function(){
-            inputs.last().focus();
+    var expand = function(fieldSet){
+        fieldSet.find('.toggle').slideDown(100,function(){
+            fieldSet.find('input,textarea').last().focus();
         });
-        if(question.data('closed')){
-            title.css({
-                'width': '100%',
-                'white-space': 'normal'
-            });
-            fieldSet.css({
-                'padding-bottom': '20px'
-            });
-            question.data('closed',false);
+
+        fieldSet.find('p').first().css({
+            'width': '100%',
+            'white-space': 'normal'
+        });
+        fieldSet.css({
+            'padding-bottom': '20px'
+        });
+        fieldSet.data('closed',false);
+    };
+
+    var collapse = function(fieldSet){
+        fieldSet.find('.toggle').slideUp();
+        fieldSet.find('p').first().css({
+            'width': fieldSet.width(),
+            'white-space': 'nowrap',
+            'text-overflow': 'ellipsis',
+            'overflow': 'hidden'
+        });
+        fieldSet.css({
+            'padding-bottom': 0
+        });
+        fieldSet.data('closed',true);
+    };
+
+    var toggle = function(fieldSet){
+        if(fieldSet.data('closed')){
+            expand(fieldSet);
         }else{
-            title.css({
-                'width': fieldSet.width(),
-                'white-space': 'nowrap',
-                'text-overflow': 'ellipsis',
-                'overflow': 'hidden'
-            });
-            fieldSet.css({
-                'padding-bottom': 0
-            });
-            question.data('closed',true);
+            collapse(fieldSet);
         }
     };
 
@@ -37,6 +44,14 @@
         var position = window.pageYOffset;
         $('fieldset').each(function(i,el){
             collapse($(el));
+        });
+        window.scrollTo(0,position);
+    };
+
+    var expandAll = function(){
+        var position = window.pageYOffset;
+        $('fieldset').each(function(i,el){
+            expand($(el));
         });
         window.scrollTo(0,position);
     };
@@ -78,10 +93,12 @@
     };
 
     $(function(){
-        $('.question_mark').bind('click',function(){
-            console.log('click');
-            collapse($(this).parent());
+        var questions = $('.question_mark');
+
+        questions.bind('click',function(){
+            toggle($(this).parent());
         });
+
         $('fieldset').focusout(function(){
             var fieldSet = $(this);
             checkForPassing(fieldSet);
@@ -91,12 +108,19 @@
             checkForPassing(fieldSet);
         });
 
-        var paper = Raphael(0, 50, 200, 200);
-        progressCircle = paper.createProgressBar(70,120,20,50,15,"#e74c3c","#1abc9c");
+        var paper = Raphael(0, 50, 300, 300);
+        progressCircle = paper.createProgressBar(120,120,20,50,15,"#e74c3c","#1abc9c");
         $(paper.canvas).css({
             'position':'fixed',
             'left': '3%',
-            'zIndex':-1
+            'marginLeft': '-60px'
+        });
+
+        questions.each(function(i,question){
+            progressCircle.sectors[i].click(function(){
+                window.scrollTo(0,$(question).offset().top-155);
+                expand($(question).parent());
+            });
         });
 
     });
