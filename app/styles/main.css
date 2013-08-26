@@ -177,15 +177,66 @@ textarea {
     white-space: pre-wrap;
     float: left;
 }
-.inline input{
+.inline input,
+.inline span{
     margin-left: 10px;
     width: 200px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .inline textarea{
     margin-left: 10px;
     width: 198px;
 }
 
+.btn:hover,
+.btn:focus {
+    background-color: #9b59b6;
+    text-decoration: none;
+    outline-offset: -2px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #bdc3c7;
+}
+.btn:active{
+    background-image: none;
+    outline: 0;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-file {
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.btn-file > input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translate(-300px, 0) scale(4);
+    font-size: 23px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+#recommendOther{
+    display: none;
+}
 
 .okgo{
     text-align:center;
@@ -196,6 +247,7 @@ textarea {
 
 .okgo input{
     margin: 0 10px 0 10px;
+    background-color: #ecf0f1;
 }
 
 

@@ -52,7 +52,7 @@
                 </p>
             </div>
 
-            <form>
+            <form enctype="multipart/form-data">
                 <fieldset>
                     <div class="question_mark">
                         <label for="birth">1</label>
@@ -258,7 +258,12 @@
                     <h3>Расскажите нам о себе</h3>
                     <div class="inline">
                         <label for="fileUpload">Резюме до 250 КБ</label>
-                        <input type="file" id="fileUpload" name="fileUpload"/>
+                        <span class="btn btn-file">Выберите файл
+                            <input type="file" id="fileUpload" name="fileUpload"/>
+                        </span>
+                        <span class="file-name">
+
+                        </span>
                     </div>
                     <div class="inline">
                         <label for="myCircle">Ссылка на профиль в Моем Круге</label>
@@ -301,7 +306,7 @@
                     </div>
                     <div>
                         <p>
-                            <input type="checkbox" name="iAgree" id="iAgree" />
+                            <input type="checkbox" name="iAgree" id="iAgree" required="true"/>
                             <label for="iAgree">
                                 <strong>
                                     Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
@@ -312,8 +317,8 @@
                 </div>
 
                 <div class="okgo">
-                    <input type="submit" value="Отправить" />
-                    <input type="reset"  value="Очистить" />
+                    <input type="submit" value="Отправить" class="btn" />
+                    <input type="reset"  value="Очистить" class="btn" />
                 </div>
             </form>
         </div>

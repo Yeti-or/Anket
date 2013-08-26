@@ -128,6 +128,26 @@
             });
         });
 
+        $('#fileUpload').change(function(){
+            var name = '';
+            if(this.files === undefined){
+                var arr = this.value.split('\\');
+                name = arr[arr.length-1];
+            }else{
+                name = this.files[0].name;
+            }
+            $('.file-name')[0].innerText = name;
+        });
+
+        $('#recommendBy').change(function(){
+            if(this.value === 'other'){
+                $('#recommendOther').show();
+                $('#recommendOther').focus();
+            }else{
+                $('#recommendOther').hide();
+            }
+        });
+
     });
 
 })();
