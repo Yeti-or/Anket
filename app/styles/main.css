@@ -106,6 +106,7 @@ fieldset {
     margin-left: -90px;
     margin-top: 15px;
     cursor: pointer;
+    z-index: 3;
 }
 .question_mark label{
     line-height:30px;

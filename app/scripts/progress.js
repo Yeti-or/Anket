@@ -41,11 +41,6 @@ Raphael.fn.createProgressBar = function(x,y,rIn,rOut,itemsCount,colour,colourPro
         ).attr(params);
     };
 
-    paper.circle(x, y, rOut).attr({
-        "fill": colour,
-        "stroke-width": "0"
-    });
-
     var progressBar = new ProgressBar();
     progressBar.onColour = colourProgress;
     progressBar.offColour = colour;
@@ -53,7 +48,12 @@ Raphael.fn.createProgressBar = function(x,y,rIn,rOut,itemsCount,colour,colourPro
     for(var angle=0;angle<360;angle+=sectorAngle){
         progressBar.sectors.push(
             drawSector(x,y,rOut,angle,angle+sectorAngle,{
-                "stroke":colour
+                "stroke":colour,
+                "fill":colour
+            }).mouseover(function(){
+                this.stop().animate({transform:"s 1.5 1.5 "+ x+" "+y});
+            }).mouseout(function(){
+                this.stop().animate({transform:""},450,"backOut");
         }));
     }
 
