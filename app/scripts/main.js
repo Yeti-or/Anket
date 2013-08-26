@@ -3,9 +3,11 @@
 (function(){
     var progressCircle = null;
 
-    var expand = function(fieldSet){
+    var expand = function(fieldSet,focus){
         fieldSet.find('.toggle').slideDown(100,function(){
-            fieldSet.find('input,textarea').last().focus();
+            if(focus){
+                fieldSet.find('input,textarea').last().focus();
+            }
         });
 
         fieldSet.find('p').first().css({
@@ -34,7 +36,7 @@
 
     var toggle = function(fieldSet){
         if(fieldSet.data('closed')){
-            expand(fieldSet);
+            expand(fieldSet,true);
         }else{
             collapse(fieldSet);
         }
@@ -99,6 +101,14 @@
             toggle($(this).parent());
         });
 
+        $('.expandAll').click(function(){
+            expandAll();
+        });
+
+        $('.collapseAll').click(function(){
+            collapseAll();
+        });
+
         $('fieldset').focusout(function(){
             var fieldSet = $(this);
             checkForPassing(fieldSet);
@@ -108,18 +118,13 @@
             checkForPassing(fieldSet);
         });
 
-        var paper = Raphael(0, 50, 300, 300);
-        progressCircle = paper.createProgressBar(120,120,20,50,15,"#e74c3c","#1abc9c");
-        $(paper.canvas).css({
-            'position':'fixed',
-            'left': '3%',
-            'marginLeft': '-60px'
-        });
+        progressCircle = Raphael('progress', 300, 300)
+            .createProgressBar(120,120,20,50,15,"#e74c3c","#1abc9c");
 
         questions.each(function(i,question){
             progressCircle.sectors[i].click(function(){
                 window.scrollTo(0,$(question).offset().top-155);
-                expand($(question).parent());
+                expand($(question).parent(),true);
             });
         });
 
